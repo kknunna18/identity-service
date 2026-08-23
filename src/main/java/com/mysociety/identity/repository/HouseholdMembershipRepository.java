@@ -8,8 +8,9 @@ import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 import java.util.UUID;
+import com.mysociety.identity.repository.HouseholdMembershipRepositoryCustom;
 
-public interface HouseholdMembershipRepository extends JpaRepository<HouseholdMembership, UUID> {
+public interface HouseholdMembershipRepository extends JpaRepository<HouseholdMembership, UUID>, HouseholdMembershipRepositoryCustom {
 
     @Query("select hm from HouseholdMembership hm where hm.user.id = :userId and (hm.moveOutDate is null or hm.moveOutDate > current_date)")
     List<HouseholdMembership> findActiveByUserId(@Param("userId") UUID userId);

@@ -5,6 +5,7 @@ import com.mysociety.identity.dto.LoginRequest;
 import com.mysociety.identity.dto.UserInfoResponse;
 import com.mysociety.identity.dto.v1.LoginRequestV1;
 import com.mysociety.identity.dto.v1.LoginResponseV1;
+import com.mysociety.identity.dto.v1.SelectSocietyRequest;
 import com.mysociety.identity.entity.AppUser;
 import com.mysociety.identity.repository.AppUserRepository;
 import com.mysociety.identity.security.JwtService;
@@ -62,6 +63,10 @@ public class AuthHandler {
     // v1 login should be delegated to AuthenticationService
     public LoginResponseV1 loginV1(LoginRequestV1 request) {
         return authenticationService.login(request);
+    }
+
+    public LoginResponseV1 selectSociety(SelectSocietyRequest request) {
+        return authenticationService.selectSociety(request.loginContextToken(), request.societyId());
     }
 
     public UserInfoResponse currentUser(String username) {
