@@ -38,6 +38,10 @@ service-by-service target-state requirements catalogue. The code deliberately
 uses Spring Boot 3.x—not Boot 4—and modern Spring Security configuration,
 never `WebSecurityConfigurerAdapter`.
 
+`docs/ui-requirements.md` contains the target web-application roles, design
+system, responsive behavior, authentication flow, dashboards, and domain
+screens.
+
 ## Run locally
 
 Prerequisites: Java 21, PostgreSQL with the existing `mysociety` database/schema, and Node.js 20+.
