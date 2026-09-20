@@ -32,8 +32,11 @@ this service.
 | Client data and forms | Axios, TanStack Query, React Hook Form, Zod, Zustand |
 | Frontend quality      | Vitest, React Testing Library, ESLint, Prettier |
 
-`docs/architecture.md` describes the current service boundary and the planned platform expansion. The code deliberately
-uses Spring Boot 3.x—not Boot 4—and modern Spring Security configuration, never `WebSecurityConfigurerAdapter`.
+`docs/architecture.md` describes the current service boundary and planned
+platform expansion. `docs/service-requirements.md` is the complete
+service-by-service target-state requirements catalogue. The code deliberately
+uses Spring Boot 3.x—not Boot 4—and modern Spring Security configuration,
+never `WebSecurityConfigurerAdapter`.
 
 ## Run locally
 
